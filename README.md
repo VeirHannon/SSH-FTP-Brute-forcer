@@ -12,8 +12,22 @@ It was written and used exclusively in controlled, self-authorized environments 
 Online password guessing against systems you do not own or have explicit written permission to test is illegal in most jurisdictions
 (e.g. the Computer Fraud and Abuse Act in the US, and equivalent laws elsewhere).
 Do not use it anywhere you are not authorized. The author takes no responsibility for misuse.
-If you're defending infrastructure and found this while researching the attack side, the mitigations that neutralize this whole class
-of tool are: key-based auth instead of passwords, fail2ban / rate limiting, account lockout, and not exposing SSH/FTP to the public internet unnecessarily.  
+
+## Mitigations
+
+This class of attack is trivially defeated by standard hardening. If you're
+defending infrastructure, any of the following will neutralize online
+brute-forcing:
+
+- **Key-based authentication** - disable password auth for SSH entirely; there's
+  nothing to guess.
+- **Rate limiting / fail2ban** - ban or throttle an IP after a few failed
+  attempts, making exhaustive guessing impractical.
+- **Account lockout** - temporarily lock an account after N failed logins.
+- **Don't expose SSH/FTP publicly** - keep them behind a VPN or restricted to
+  trusted networks when internet access isn't required.
+- **Strong, unique passwords** - where password auth is unavoidable, length and
+  randomness push brute-force time beyond feasibility.
 
 ## Installation
 
@@ -26,9 +40,9 @@ python3 ssh_ftp_brute.py
 
 ## Requirements
 
-- Python 3.8+
-- pexpect
-- tqdm
+- **Python 3.8+**
+- **pexpect**
+- **tqdm**
 
 ## Usage, Examples and Options  
 Intended for authorized lab targets only. See --help for options.  
