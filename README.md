@@ -14,8 +14,8 @@ The author bears no responsibility for any misuse or damage caused by this tool.
 ## Installation
 
 ```bash
-git clone https://github.com/VeirHannon/ssh-ftp-brute.git
-cd ssh-ftp-brute
+git clone https://github.com/VeirHannon/SSH-FTP-Brute-forcer.git
+cd SSH-FTP-Brute-forcer
 pip install -r requirements.txt
 python3 ssh_ftp_brute.py
 ```
