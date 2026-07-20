@@ -35,6 +35,11 @@ Python 3.8+
 pexpect
 tqdm
 
+## Usage
+``` Bash  
+python ssh_ftp_brute.py <mode> <host> <username> <wordlist> [OPTIONS]
+```
+
 ## Options
 
 | **Argument** | **Short** | **Description**                         | **Default** |
@@ -47,10 +52,7 @@ tqdm
 | \-\-timeout  | \-T       | Connection timeout in seconds           | 8           |
 | \-\-delay    | \-        | Delay between thread starts \(seconds\) | 0\.1        |
 
-## Usage
-``` Bash  
-python ssh_ftp_brute.py <mode> <host> <username> <wordlist> [OPTIONS]
-```
+
 ## Examples:
 ```Bash
 SSH brute force
