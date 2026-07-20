@@ -31,4 +31,8 @@ python3 ssh_ftp_brute.py
 - tqdm
 
 ## Usage, Examples and Options  
-Intended for authorized lab targets only. See --help for options.
+Intended for authorized lab targets only. See --help for options.  
+``` python
+# Against a local lab target
+python3 ssh_ftp_brute.py --target 127.0.0.1 --service ssh --userlist users.txt --passlist pass.txt
+```
