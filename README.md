@@ -5,11 +5,15 @@
 
 A multithreaded brute-force tool for SSH and FTP protocols. Designed for CTF challenges, security research, and authorized penetration testing.
 
-## Security Disclaimer
-This tool is intended for authorized security testing, CTF exercises, and legitimate system administration purposes only.  
-Unauthorized use against systems without explicit permission is illegal and may violate applicable laws  
-(including the Computer Fraud and Abuse Act in the US or equivalent legislation in other jurisdictions).  
-The author bears no responsibility for any misuse or damage caused by this tool.
+## Context and scope
+This tool exists for one purpose: learning how online brute-force attacks work against services you own or are explicitly authorized to test.  
+It was written and used exclusively in controlled, self-authorized environments — local vulnerable VMs and self-hosted CTF labs   
+(VulnHub images and custom lab setups). It has never been pointed at third-party infrastructure.  
+Online password guessing against systems you do not own or have explicit written permission to test is illegal in most jurisdictions  
+(e.g. the Computer Fraud and Abuse Act in the US, and equivalent laws elsewhere).  
+Do not use it anywhere you are not authorized. The author takes no responsibility for misuse.  
+If you're defending infrastructure and found this while researching the attack side, the mitigations that neutralize this whole class  
+of tool are: key-based auth instead of passwords, fail2ban / rate limiting, account lockout, and not exposing SSH/FTP to the public internet unnecessarily.  
 
 ## Installation
 
@@ -22,36 +26,9 @@ python3 ssh_ftp_brute.py
 
 ## Requirements
 
-Python 3.8+
-pexpect
-tqdm
+- Python 3.8+
+- pexpect
+- tqdm
 
-## Usage
-``` Bash  
-python ssh_ftp_brute.py <mode> <host> <username> <wordlist> [OPTIONS]
-```
-
-## Options
-
-| **Argument** | **Short** | **Description**                         | **Default** |
-| :------ | :-----------: | :----------------------: | -------------: |
-| mode         | \-        | Attack mode \(ssh or ftp\)              | \-          |
-| host         | \-        | Target host IP or hostname              | \-          |
-| username     | \-        | Username to brute\-force                | \-          |
-| wordlist     | \-        | Path to password wordlist               | \-          |
-| \-\-threads  | \-t       | Number of concurrent threads            | 10          |
-| \-\-timeout  | \-T       | Connection timeout in seconds           | 8           |
-| \-\-delay    | \-        | Delay between thread starts \(seconds\) | 0\.1        |
-
-
-## Examples:
-```Bash
-SSH brute force
-python ssh_ftp_brute.py ssh 192.168.1.100 admin passwords.txt -t 20
-
-FTP brute force
-python ssh_ftp_brute.py ftp 10.10.10.50 user rockyou.txt --threads 15 --delay 0.05
-
-SSH with increased timeout
-python ssh_ftp_brute.py ssh target.local root wordlist.txt -T 12
-```
+## Usage, Examples and Options  
+Intended for authorized lab targets only. See --help for options.
