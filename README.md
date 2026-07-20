@@ -5,15 +5,6 @@
 
 A multithreaded brute-force tool for SSH and FTP protocols. Designed for CTF challenges, security research, and authorized penetration testing.
 
-## Features
-
-- Support for both SSH (via pxssh) and FTP (via ftplib)
-- Configurable multithreading using ThreadPoolExecutor
-- Progress bar with tqdm
-- Customizable connection timeout and thread delay
-- Clean success output with credential details
-- Proper error handling and input validation
-
 ## Security Disclaimer
 This tool is intended for authorized security testing, CTF exercises, and legitimate system administration purposes only.  
 Unauthorized use against systems without explicit permission is illegal and may violate applicable laws  
