@@ -10,9 +10,9 @@ This tool exists for one purpose: learning how online brute-force attacks work a
 It was written and used exclusively in controlled, self-authorized environments — local vulnerable VMs and self-hosted CTF labs   
 (VulnHub images and custom lab setups). It has never been pointed at third-party infrastructure.  
 Online password guessing against systems you do not own or have explicit written permission to test is illegal in most jurisdictions
-(e.g. the Computer Fraud and Abuse Act in the US, and equivalent laws elsewhere).  
-Do not use it anywhere you are not authorized. The author takes no responsibility for misuse.  
-If you're defending infrastructure and found this while researching the attack side, the mitigations that neutralize this whole class  
+(e.g. the Computer Fraud and Abuse Act in the US, and equivalent laws elsewhere).
+Do not use it anywhere you are not authorized. The author takes no responsibility for misuse.
+If you're defending infrastructure and found this while researching the attack side, the mitigations that neutralize this whole class
 of tool are: key-based auth instead of passwords, fail2ban / rate limiting, account lockout, and not exposing SSH/FTP to the public internet unnecessarily.  
 
 ## Installation
