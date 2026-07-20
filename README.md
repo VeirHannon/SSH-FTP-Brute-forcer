@@ -26,6 +26,7 @@ The author bears no responsibility for any misuse or damage caused by this tool.
 git clone https://github.com/VeirHannon/ssh-ftp-brute.git
 cd ssh-ftp-brute
 pip install -r requirements.txt
+python3 ssh_ftp_brute.py
 ```
 
 ## Requirements
